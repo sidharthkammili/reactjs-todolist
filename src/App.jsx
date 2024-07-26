@@ -7,7 +7,7 @@ function App() {
   const [todos, setTodos] = useState([])
   const [todoValue, setTodoValue] = useState('')
 
-//persist function to keep data
+//persist function to keep data when page is refreshed
 function persistData(newList) {
   localStorage.setItem('todos', JSON.stringify({todos:newList}))
 }
@@ -35,7 +35,7 @@ function handleEditTodo(index) {
   handleDeleteTodo(index)
 }
 
-//useEffect
+//useEffect 
 useEffect(() => {
   if (!localStorage) {
     return
